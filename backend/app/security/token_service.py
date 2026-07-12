@@ -179,7 +179,10 @@ class JWTTokenService:
                 audience=self._audience,
                 issuer=self._issuer,
                 options={
-                    "require": ["sub", "email", "roles", "permissions", "iat", "exp", "iss", "aud", "jti"],
+                    "require": [
+                        "sub", "email", "roles", "permissions",
+                        "iat", "exp", "iss", "aud", "jti",
+                    ],
                 },
             )
             return dict(decoded)

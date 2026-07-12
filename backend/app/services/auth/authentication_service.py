@@ -225,7 +225,9 @@ class AuthenticationService:
         updated_user = await self._user_repository.verify_user(user)
 
         if actor_user_id is not None:
-            updated_user = await self._user_repository.update_user(updated_user, updated_by=actor_user_id)
+            updated_user = await self._user_repository.update_user(
+                updated_user, updated_by=actor_user_id
+            )
 
         await self.generate_authentication_audit_event(
             event_type="auth.account_verification.success",
@@ -251,7 +253,9 @@ class AuthenticationService:
         updated_user = await self._user_repository.reset_failed_login_attempts(updated_user)
 
         if actor_user_id is not None:
-            updated_user = await self._user_repository.update_user(updated_user, updated_by=actor_user_id)
+            updated_user = await self._user_repository.update_user(
+                updated_user, updated_by=actor_user_id
+            )
 
         await self.generate_authentication_audit_event(
             event_type="auth.account.unlocked",

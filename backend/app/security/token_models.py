@@ -19,7 +19,7 @@ class TokenPayload:
     token_type: str
 
     @classmethod
-    def from_claims(cls, claims: dict[str, Any]) -> "TokenPayload":
+    def from_claims(cls, claims: dict[str, Any]) -> TokenPayload:
         return cls(
             sub=str(claims["sub"]),
             email=str(claims["email"]),

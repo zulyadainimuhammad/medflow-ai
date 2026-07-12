@@ -18,7 +18,11 @@ class PermissionRepository(BaseRepository[Permission]):
         return await self.scalars_all(stmt)
 
     async def get_permissions_for_role(self, role_id: int) -> list[Permission]:
-        stmt = select(Permission).where(Permission.role_id == role_id).order_by(Permission.name.asc())
+        stmt = (
+            select(Permission)
+            .where(Permission.role_id == role_id)
+            .order_by(Permission.name.asc())
+        )
         return await self.scalars_all(stmt)
 
     async def get_permissions_for_user(self, user_id: UUID) -> list[Permission]:

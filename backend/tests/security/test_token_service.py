@@ -15,7 +15,6 @@ from app.security.token_exceptions import (
 from app.security.token_interfaces import TokenRevocationHook
 from app.security.token_service import JWTTokenService
 
-
 TEST_SECRET = "unit-test-secret-key-with-32-bytes!!"
 
 
