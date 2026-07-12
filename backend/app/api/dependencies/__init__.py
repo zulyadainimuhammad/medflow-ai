@@ -3,9 +3,9 @@ from app.api.dependencies.auth import (
     get_current_active_user,
     get_current_user,
     get_current_verified_user,
+    permission_checker,
     require_permission,
     require_role,
-    permission_checker,
     role_checker,
 )
 

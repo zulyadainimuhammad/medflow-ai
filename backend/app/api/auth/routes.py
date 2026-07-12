@@ -29,7 +29,12 @@ from app.schemas.auth import (
 )
 from app.security import Argon2PasswordHasher
 from app.security.token_dependencies import get_token_service
-from app.security.token_exceptions import TokenDecodeError, TokenExpiredError, TokenServiceError, TokenTypeError
+from app.security.token_exceptions import (
+    TokenDecodeError,
+    TokenExpiredError,
+    TokenServiceError,
+    TokenTypeError,
+)
 from app.security.token_interfaces import TokenService
 from app.security.token_models import TokenPair
 from app.services.auth import (
