@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Any
 
 from fastapi import Depends, HTTPException, Request, status
+
 from app.services.auth.models import AuthenticatedUser
 
 

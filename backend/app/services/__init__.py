@@ -1,7 +1,7 @@
 from app.services.auth import (
-    AuthenticationService,
     AuthAuditEvent,
     AuthAuditEventPublisher,
+    AuthenticationService,
     PasswordHasher,
 )
 

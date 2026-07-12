@@ -1,13 +1,12 @@
 from __future__ import annotations
 
 import asyncio
-from datetime import UTC, datetime
 from unittest.mock import AsyncMock, MagicMock
 from uuid import uuid4
 
 import pytest
 
-from app.db.models.auth import Role, User
+from app.db.models.auth import User
 from app.services.auth.authentication_service import AuthenticationService
 from app.services.auth.dependencies import get_authentication_service
 from app.services.auth.exceptions import (
