@@ -1,0 +1,71 @@
+﻿# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+
+# Logs
+*.log
+logs/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Java/JVM
+*.class
+.gradle/
+out/
+
+# Go
+bin/
+*.test
+
+# Rust
+target/
+
+# Build artifacts
+dist/
+build/
+coverage/
+.tmp/
+tmp/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Docker
+*.tar
+
+# Database
+*.sqlite
+*.db
+
+# Misc
+.cache/

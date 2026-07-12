@@ -1,0 +1,10 @@
+﻿# Global owners
+* @medflow-ai/platform-owners
+
+# Domain ownership
+/frontend/ @medflow-ai/frontend-team
+/backend/ @medflow-ai/backend-team
+/ai-engine/ @medflow-ai/ai-team
+/database/ @medflow-ai/data-team
+/infrastructure/ @medflow-ai/devops-team
+/docs/ @medflow-ai/product-tech-writers

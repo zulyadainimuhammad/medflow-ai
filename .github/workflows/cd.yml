@@ -1,0 +1,14 @@
+﻿name: CD
+
+on:
+  workflow_dispatch:
+
+jobs:
+  cd-placeholder:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: CD Placeholder
+        run: echo "Configure deployment stages and environment promotion flow"
