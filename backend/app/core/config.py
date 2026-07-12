@@ -10,6 +10,10 @@ class Settings(BaseSettings):
     app_version: str = "0.1.0"
     api_base_path: str = "/api/v1"
     database_url: str = "postgresql+psycopg://medflow:medflow_dev_password@db:5432/medflow"
+    jwt_secret_key: str = "change-me-in-production"
+    jwt_issuer: str = "medflow-ai"
+    jwt_audience: str = "medflow-api"
+    jwt_algorithm: str = "HS256"
 
     model_config = SettingsConfigDict(
         env_file=".env",
