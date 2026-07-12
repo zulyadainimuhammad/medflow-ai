@@ -3,11 +3,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "MedFlow AI",
-  description: "Engineering foundation for MedFlow AI frontend"
+  description: "Engineering foundation for MedFlow AI frontend",
 };
 
 export default function RootLayout({
-  children
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
