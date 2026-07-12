@@ -50,5 +50,7 @@ class TokenRevocationHook(Protocol):
     def is_revoked(self, *, jti: str) -> bool:
         ...
 
-    def revoke(self, *, jti: str, expires_at: datetime, metadata: dict[str, Any] | None = None) -> None:
+    def revoke(
+        self, *, jti: str, expires_at: datetime, metadata: dict[str, Any] | None = None
+    ) -> None:
         ...

@@ -7,7 +7,6 @@ import pytest
 from app.security.token_exceptions import TokenDecodeError, TokenExpiredError, TokenTypeError
 from app.security.token_service import JWTTokenService
 
-
 TEST_SECRET = "medflow-auth-jwt-test-secret-32bytes"
 
 

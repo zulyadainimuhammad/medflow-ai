@@ -5,9 +5,10 @@ from app.security.password_policy import (
     InvalidPasswordError,
     PasswordPolicy,
     PasswordPolicyConfig,
-    PasswordSecurityError,
     PasswordPolicyViolationError,
+    PasswordSecurityError,
 )
+from app.security.token_dependencies import get_token_service
 from app.security.token_exceptions import (
     TokenDecodeError,
     TokenExpiredError,
@@ -17,7 +18,6 @@ from app.security.token_exceptions import (
     TokenServiceError,
     TokenTypeError,
 )
-from app.security.token_dependencies import get_token_service
 from app.security.token_interfaces import TokenRevocationHook, TokenService
 from app.security.token_models import TokenPair, TokenPayload
 from app.security.token_service import JWTTokenService

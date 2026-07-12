@@ -14,7 +14,6 @@ from app.services.auth.exceptions import (
     AccountInactiveError,
     AccountLockedError,
     AccountNotVerifiedError,
-    InvalidCredentialsError,
     PasswordChangeRejectedError,
     UserAlreadyExistsError,
     UserNotFoundError,

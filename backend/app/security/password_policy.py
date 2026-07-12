@@ -1,8 +1,8 @@
 from __future__ import annotations
 
 import re
+from collections.abc import Callable
 from dataclasses import dataclass
-from typing import Callable
 
 COMMON_PASSWORD_BLACKLIST: frozenset[str] = frozenset(
     {
@@ -69,7 +69,9 @@ class PasswordPolicy:
         violations: list[str] = []
 
         if len(password) < self._config.min_length:
-            violations.append(f"Password must be at least {self._config.min_length} characters long")
+            violations.append(
+                f"Password must be at least {self._config.min_length} characters long"
+            )
 
         if self._config.require_uppercase and not re.search(r"[A-Z]", password):
             violations.append("Password must contain at least one uppercase letter")
