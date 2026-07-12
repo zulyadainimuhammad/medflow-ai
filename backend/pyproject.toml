@@ -27,6 +27,9 @@ dev = [
   "ruff>=0.6.9,<1.0.0",
 ]
 
+[tool.hatch.build.targets.wheel]
+packages = ["app"]
+
 [tool.black]
 line-length = 100
 target-version = ["py312"]
@@ -44,6 +47,9 @@ src = ["app", "tests"]
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
 ignore = ["E203"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app"]
 
 [tool.mypy]
 python_version = "3.12"
