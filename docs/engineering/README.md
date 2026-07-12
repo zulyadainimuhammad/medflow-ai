@@ -1,8 +1,8 @@
 # Engineering Documentation
 
-This directory contains operational templates and standards for engineering execution across MedFlow AI.
+This directory contains production engineering standards and execution playbooks for MedFlow AI.
 
-## Included Templates
+## Included Documents
 - Coding standards
 - Developer onboarding
 - Testing strategy
@@ -10,4 +10,4 @@ This directory contains operational templates and standards for engineering exec
 - Contribution workflow
 
 ## Usage
-Copy each template into team-specific implementation documents and keep versions aligned with architecture and product decisions.
+Use these documents as baseline engineering policy. Update them through pull requests when architecture, security requirements, or delivery processes evolve.

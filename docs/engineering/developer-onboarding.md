@@ -1,42 +1,104 @@
-# Developer Onboarding - Template
+# Developer Onboarding - MedFlow AI
 
 ## 1. Welcome
-Introduce MedFlow AI engineering values, mission, and expected contributor outcomes.
+Welcome to MedFlow AI. This onboarding guide helps new engineers become productive while maintaining healthcare-grade reliability, security, and quality.
+
+Engineering expectations:
+- Build with patient flow safety and operational reliability in mind.
+- Respect domain boundaries and role-based workflow constraints.
+- Ship traceable, tested, and reviewable increments.
 
 ## 2. Access and Accounts
-- Repository and organization access
-- Identity provider and MFA setup
-- Secrets manager and environment access
-- Required training/compliance onboarding
+Before writing code, ensure the following are complete:
+- GitHub repository access.
+- Organization SSO and MFA enabled.
+- Access to GitHub Actions logs and deployment artifacts.
+- Azure non-production access (as required by role).
+- Access to secret management workflow (without direct secret export).
 
-## 3. Local Setup
-- Required tools and versions
-- Environment configuration
-- First-time bootstrap steps
-- Common setup issues
+Required policy acknowledgments:
+- Secure coding policy.
+- Data handling policy for regulated healthcare data.
+- Incident escalation and on-call etiquette.
+
+## 3. Local Development Environment Setup
+### Tooling Baseline
+- Git
+- Node.js 20+
+- Python 3.12+
+- Docker and Docker Compose
+- PostgreSQL client tools
+
+### Clone and Bootstrap
+```bash
+git clone <repo-url>
+cd medflow-ai
+```
+
+Create local environment files:
+- frontend/.env.local
+- backend/.env
+
+Run local stack:
+```bash
+docker compose up -d --build
+docker compose exec backend alembic upgrade head
+docker compose exec backend pytest -m smoke
+```
+
+Optional local non-container runs:
+```bash
+cd backend && pip install -r requirements.txt
+cd frontend && npm install
+```
 
 ## 4. Architecture and Domain Orientation
-- System overview
-- Domain ownership model
-- Key documents to read first
+Read in this order:
+1. docs/product/product-vision.md
+2. docs/product/product-requirements-document.md
+3. docs/architecture/system-architecture.md
+4. docs/architecture/database-design.md
+5. docs/engineering/security-guidelines.md
 
-## 5. Development Workflow
-- Branching strategy
-- Commit conventions
-- Pull request process
-- CI/CD expectations
+Domain ownership model:
+- frontend: role-specific user experiences.
+- backend: domain APIs and workflow orchestration.
+- database: schema, integrity, and migrations.
+- infrastructure: deployment and runtime operations.
+
+## 5. Daily Development Workflow
+1. Pull latest main branch.
+2. Create branch: feature/<scope> or fix/<scope>.
+3. Implement changes with tests.
+4. Run lint, type checks, and tests locally.
+5. Open pull request with required template fields.
+6. Address review feedback and ensure CI passes.
 
 ## 6. Quality and Security Baseline
-- Required tests before merge
-- Security checks and static analysis
-- Data handling rules for PHI/PII
+Before merge, every PR must:
+- Pass linting and formatting checks.
+- Pass unit and relevant integration tests.
+- Include test coverage for new logic.
+- Include documentation updates for behavior changes.
+- Pass dependency and secret scanning checks.
+
+Data safety rules:
+- Never commit PHI, credentials, or production exports.
+- Use synthetic/anonymized data for tests.
 
 ## 7. First Week Plan
-- Day 1: Setup and orientation
-- Day 2 to 3: Shadow and small issue
-- Day 4 to 5: First independent change
+- Day 1: Environment setup, architecture walkthrough, and access verification.
+- Day 2: Review one merged PR in each major domain.
+- Day 3: Deliver first low-risk issue with full test and doc updates.
+- Day 4: Pair on workflow-critical module change.
+- Day 5: Present implementation summary and lessons learned.
 
-## 8. Support Channels
-- Engineering support contacts
-- Escalation path
-- Documentation ownership contacts
+## 8. Common Setup Issues
+- Docker containers fail to start: verify local port conflicts and restart Docker daemon.
+- Migration errors: reset local database volume and rerun migrations.
+- Auth failures: verify JWT env values and system clock synchronization.
+
+## 9. Support and Escalation
+- Engineering support: platform and domain leads in repository discussions.
+- Security concerns: follow SECURITY.md reporting process.
+- Release blockers: escalate to release manager and on-call platform engineer.

@@ -1,66 +1,58 @@
-# ADR-0000: Title of Decision
+# ADR Authoring Standard - MedFlow AI
 
-- Status: Proposed | Accepted | Superseded | Rejected
-- Date:
-- Decision Makers:
-- Technical Story / Related Issue:
+This document defines the required structure and quality bar for architecture decision records in MedFlow AI.
 
-## Context
-Describe the business and technical context that requires this decision.
+## Purpose
+ADRs capture high-impact technical decisions so teams can understand why a path was chosen, what alternatives were considered, and how decisions affect security, reliability, and delivery.
 
-## Decision Drivers
-- Driver 1:
-- Driver 2:
-- Driver 3:
+## Required ADR Structure
+Each ADR must include the following sections:
 
-## Considered Options
-1. Option A
-2. Option B
-3. Option C
+1. Header
+- ADR ID and title
+- Status (Proposed, Accepted, Superseded, Rejected)
+- Decision date
+- Decision makers
+- Related issue/epic link
 
-## Decision Outcome
-### Chosen Option
-State selected option and rationale.
+2. Context
+- Problem statement and constraints.
+- Why the decision is needed now.
 
-### Positive Consequences
-- Benefit 1
-- Benefit 2
+3. Decision Drivers
+- Product outcomes.
+- Security/compliance requirements.
+- Reliability/performance requirements.
+- Team and operational constraints.
 
-### Negative Consequences
-- Trade-off 1
-- Trade-off 2
+4. Options Considered
+- At least two viable options documented.
+- Risks and trade-offs for each option.
 
-## Pros and Cons of Options
-### Option A
-- Pros:
-- Cons:
+5. Decision Outcome
+- Chosen option and rationale.
+- Positive consequences.
+- Negative consequences and known limitations.
 
-### Option B
-- Pros:
-- Cons:
+6. Security and Compliance Impact
+- Effect on healthcare data protection controls.
+- Audit and traceability implications.
 
-### Option C
-- Pros:
-- Cons:
+7. Operational Impact
+- SLO/reliability impact.
+- Monitoring and observability impact.
+- Cost and runbook implications.
 
-## Security, Privacy, and Compliance Impact
-- HIPAA/privacy implications:
-- Auditability impact:
-- Data residency impact:
+8. Rollout and Validation
+- Migration/rollout plan.
+- Rollback approach.
+- Validation criteria and test evidence.
 
-## Operational Impact
-- Reliability/SLO impact:
-- Observability impact:
-- Cost impact:
+9. References
+- Linked PRD sections, architecture docs, and implementation PRs.
 
-## Rollout and Migration Plan
-- Plan:
-- Rollback:
-
-## Validation Plan
-- Tests:
-- Success criteria:
-
-## References
-- Link 1
-- Link 2
+## Authoring Rules
+- Use specific, evidence-based reasoning.
+- Avoid ambiguous statements and generic justifications.
+- Link every accepted ADR in adr-index.md.
+- Superseding ADRs must reference replaced ADR IDs explicitly.

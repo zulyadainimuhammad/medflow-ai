@@ -1,10 +1,10 @@
 ﻿# Documentation Hub
 
-This directory contains documentation templates and reference structures for MedFlow AI.
+This directory contains baseline product, architecture, engineering, and operations documentation for MedFlow AI.
 
 ## How to Use
-- Start from the relevant template for your domain.
-- Copy and adapt templates for initiative-specific documents.
+- Use the relevant domain document as the source of truth.
+- Extend sections with release-specific details while preserving structure and traceability.
 - Link decisions, requirements, and implementation plans for traceability.
 
 ## Product Documentation
@@ -12,13 +12,14 @@ This directory contains documentation templates and reference structures for Med
 - [Product Requirements Document](product/product-requirements-document.md)
 
 ## Architecture Documentation
-- [ADR Template](architecture/adr-template.md)
+- [ADR Authoring Standard](architecture/adr-template.md)
 - [ADR Index](architecture/adr-index.md)
 - [System Architecture](architecture/system-architecture.md)
 - [Database Design](architecture/database-design.md)
+- [Enterprise Architecture Blueprint](architecture/enterprise-architecture.md)
 
 ## API and Deployment
-- [API Documentation Template](api/api-documentation-template.md)
+- [API Documentation](api/api-documentation-template.md)
 - [Deployment Guide](deployment/deployment-guide.md)
 
 ## UI and UX
